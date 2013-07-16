@@ -24,7 +24,7 @@ Meanings:
 1.5. Exported Parameters
 1.5.1. routing-key_avp (str)
 
-    This is for holding the name of the avp for assigning routing-key in the script. If the modparam is not used, the module will behave as before. The behavior is using the default exchange of rabbitmq and the "exchange" will be the routing-key.
+    This is for holding the name of the avp for assigning routing-key in the script. If the modparam is not used, the module will behave as before. The behavior is to use the default exchange of rabbitmq and the value of the "exchange" will be the routing-key of messages.
 
 
     Example 1.17. Set the “routing-key_avp” parameter
