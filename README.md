@@ -32,16 +32,16 @@ Meanings:
      ...
      modparam("dispatcher", "routing-key_avp", "$avp(routing-key)")
      ...
- 
- 
- 
+
+	
+
 1.8.1. OpenSIPS config file
  
-startup_route {
+ startup_route {
   if (!subscribe_event("E_SIP_MESSAGE", "rabbitmq:127.0.0.1/sipmsg")) {
 		xlog("L_ERR","cannot the RabbitMQ server to the E_SIP_MESSAGE event\n");
-	}
-}
+  }
+ }
 
 
 route{
