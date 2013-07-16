@@ -39,18 +39,17 @@ Meanings:
 
 
 
- startup_route {
+   startup_route {
  
-    if (!subscribe_event("E_SIP_MESSAGE", "rabbitmq:127.0.0.1/sipmsg")) {
+        if (!subscribe_event("E_SIP_MESSAGE", "rabbitmq:127.0.0.1/sipmsg")) {
 		xlog("L_ERR","cannot the RabbitMQ server to the E_SIP_MESSAGE event\n");
-    }
-  
- }
+        }
+   }
 
 
 route{
 
-  if (!mf_process_maxfwd_header("10")) {
+        if (!mf_process_maxfwd_header("10")) {
 		sl_send_reply("483","Too Many Hops");
 		exit;
 	}
